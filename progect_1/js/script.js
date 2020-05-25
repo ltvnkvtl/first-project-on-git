@@ -3,7 +3,9 @@ let dots = document.getElementsByClassName('dots__item'),
 	slides = document.getElementsByClassName('slides__item'),
 	prevBtn = document.getElementById('button__left'),
 	nextBtn = document.getElementById('button__right'),
-	slideIndex = 1;
+	slideIndex = 1,
+	navBtn = document.getElementById('nav__btn'),
+	navList = document.getElementById('nav__list');
 
 showSlides(slideIndex);
 
@@ -47,5 +49,16 @@ dotsArea.onclick = function(e) {
 		if (e.target.classList.contains('dots__item') && e.target == dots[i-1]) {
 			currentSlide(i);
 		}
+	}
+}
+
+
+navBtn.onclick = function(e) {
+	if (navBtn.classList.contains('nav__btn--active')) {
+		navBtn.classList.remove('nav__btn--active');
+		navList.style.transform = "translateY(-150%)";
+	} else {
+		navBtn.classList.add('nav__btn--active');
+		navList.style.transform = "translateY(0)";
 	}
 }

@@ -65,6 +65,7 @@ h1, h2, h3, h4,
 
 .nav__btn:hover {
 	transform: scale(1.1);
+	color: #10c9c3;
 }
 
 .nav__list {
@@ -96,7 +97,7 @@ h1, h2, h3, h4,
 
 .nav__link:hover {
 	color: #10c9c3;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .header__banner {
